@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchPlace">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/head"
+        android:background="@color/colorPrimary"
+        android:elevation="5dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/backArrow"
+            android:src="@drawable/back_arrow"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/searchView"
+            android:layout_toRightOf="@+id/backArrow"
+            android:layout_marginLeft="5dp"
+            android:hint="Search"
+            android:textSize="18sp"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint_white"
+            android:backgroundTint="@color/white"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/searchList"
+        android:visibility="gone"
+        android:layout_below="@id/head"></ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/currentLoc"
+        android:layout_below="@id/head"
+        android:layout_margin="10dp"
+        android:background="@drawable/white_element_bg"
+        android:elevation="5dp"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/location"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:text="Current Location"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
